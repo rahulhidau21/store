@@ -1,0 +1,6 @@
+id;password;name;email;authorities_name;created_date
+1;$2a$10$n3R2X1nCLlYzOT0i30xdPu7e.oVsVSc/In.7/9cD1RJ7JuIQg2Wj2;Administrator;admin@g.com;ROLE_ADMIN;2023-05-26 12:43:10
+2;$2a$10$n3R2X1nCLlYzOT0i30xdPu7e.oVsVSc/In.7/9cD1RJ7JuIQg2Wj2;Employee User;employee@g.com;ROLE_EMPLOYEE;2023-05-26 12:43:10
+3;$2a$10$n3R2X1nCLlYzOT0i30xdPu7e.oVsVSc/In.7/9cD1RJ7JuIQg2Wj2;Affiliate User;affiliate@g.com;ROLE_AFFILIATE;2023-05-26 12:43:10
+4;$2a$10$n3R2X1nCLlYzOT0i30xdPu7e.oVsVSc/In.7/9cD1RJ7JuIQg2Wj2;Customer;customer@g.com;ROLE_CUSTOMER;2020-05-26 12:43:10
+5;$2a$10$n3R2X1nCLlYzOT0i30xdPu7e.oVsVSc/In.7/9cD1RJ7JuIQg2Wj2;Customer 2;customer2@g.com;ROLE_CUSTOMER;2023-05-26 12:43:10

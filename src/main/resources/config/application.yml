@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: store
+  datasource:
+    url: jdbc:mysql://localhost:3306/store
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      dialect: com.x.data.core.hibernate.dialect.ExtendedH2Dialect
+      format_sql: false
+    show-sql: true
+  liquibase:
+    enabled: true
+    drop-first: true
+    change-log: classpath:config/liquibase/master.xml
+
+jwt:
+  secret: OTM1MjE2ZDRhMTc0MWI0YzZmNjViYmZiZGIyYjNkYzUxNWEwYjMyMjcxYWFiNzhmNzhhOWNhYjU4Y2IxOGQ5ZTBiOWYxOGE0ZDU0YmJkN2VjNzYxZThhZjEwOTBkY2JjOWViNzY4YTA3YTA3MWM4N2M4ZDFjZWVkOTlhYWUwZjY=
+  jwtExpirationInMs: 18000000
+
