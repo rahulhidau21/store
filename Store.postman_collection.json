@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "df63b9d6-343e-451c-98f9-7d6bdc7d1637",
+		"name": "Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18462768"
+	},
+	"item": [
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"customer@g.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save new user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBnLmNvbSIsInVzZXJOYW1lIjoiQWRtaW5pc3RyYXRvciIsInVzZXJJZCI6IjEiLCJhdXRoIjoiUk9MRV9BRE1JTiIsImV4cCI6MTY4NTExMDQ2Nn0.4WFPDv4CxqszcTPCZ8GkUhePQn6E4ds2M5WMSm5D1XJjCH5PieUVw_WZZ-9rjPIwQfipAZyJ3iiFu5dPevVukQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"rahul\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"rahul@g.com\",\r\n    \"authorities\": {\r\n        \"name\": \"ROLE_ADMIN\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill generate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjdXN0b21lcjJAZy5jb20iLCJ1c2VyTmFtZSI6IkN1c3RvbWVyIDIiLCJ1c2VySWQiOiI1IiwiYXV0aCI6IlJPTEVfQ1VTVE9NRVIiLCJleHAiOjE2ODUxODk3ODZ9.lg58-nbT3O-LlS2WOuypF2iofW3s7xTwo9_-DtJCu5Cindne5wp-Xc76chMzauP-F8ftX3w_rwdHwHN4Wi7oZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"productName\": \"item 1 \", \r\n        \"price\": 60,\r\n        \"qty\": 1,\r\n        \"type\": \"groceries\"\r\n    },\r\n    {\r\n        \"productName\": \"item 2 \", \r\n        \"price\": 60,\r\n        \"qty\": 1,\r\n        \"type\": \"groceries\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/bill/generate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"bill",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

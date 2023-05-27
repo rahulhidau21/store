@@ -45,7 +45,7 @@ public class AuthController {
         String jwt = tokenUtil.createToken(authentication, true, user);
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add(AUTHORIZATION, "Bearer " + jwt);
-        return new ResponseEntity(new ResponseMessage(HttpStatus.OK.value(), "Logged In Successfully", jwt),
+        return new ResponseEntity(new ResponseMessage(HttpStatus.OK.value(), "Token Generated Successfully", jwt),
                 httpHeaders, HttpStatus.OK);
     }
 
