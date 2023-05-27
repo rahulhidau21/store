@@ -17,7 +17,7 @@ spring:
     show-sql: true
   liquibase:
     enabled: true
-    drop-first: true
+#    drop-first: true
     change-log: classpath:config/liquibase/master.xml
 
 jwt:

@@ -8,6 +8,7 @@ import com.example.store.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -28,7 +29,9 @@ public class BillService implements IBillService {
         } else if (user.getAuthorities().getName().equals(ROLE_AFFILIATE)) {
             discount = 10;
         } else if (user.getAuthorities().getName().equals(ROLE_CUSTOMER)) {
-            discount = 5;
+            if(LocalDateTime.now().minusYears(2).isAfter(user.getCreatedDate())){
+                discount = 5;
+            }
         }
 
         int itemsTotal = 0;
